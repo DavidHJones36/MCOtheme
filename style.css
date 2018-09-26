@@ -1,0 +1,943 @@
+/*
+Theme Name: MCO Theme
+Theme URI: http://mcoaugusta.org
+GitHub Theme URI: https://github.com/davidhjones36/MCOtheme
+Author: David J
+Author URI: http://mcoaugusta.org
+Description: Theme for MCO Augusta
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bootstrappermco
+
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Word Break
+# Alignments
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+.btn {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p,
+li,
+body {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+/*--------------------------------------------------------------
+# Images
+--------------------------------------------------------------*/
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+.img-sm{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-md{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-lg {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.xs-background,
+.xl-background {
+    background-position: center;
+    background-size: cover;
+}
+
+#speaker-panel .xs-background{
+    background-position:top;
+}
+
+.welcome-img {
+    max-width: 100%;
+    max-height: 75vh;
+}
+
+.overlay-dark {
+    background-color: rgba(0, 0, 0, 0.40);
+    color: white;
+}
+
+.overlay-very-dark {
+    background-color: rgba(0, 0, 0, 0.50);
+    color: white;
+}
+
+.overlay-light {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #333;
+}
+
+.animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+.bounce {
+    animation-name: bounce;
+    transform-origin: center bottom;
+}
+
+#scroll-prompt img {
+    max-width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scroll-prompt {
+    position: relative;
+    bottom: 0;
+    margin-left: auto;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 40px;
+}
+
+#scroll-prompt img:hover {
+    opacity: 0.7;
+}
+
+.header-img {
+    margin-bottom: 50px;
+}
+
+.header-img>img{
+    max-height: calc(100vh - 130px);
+}
+
+
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+
+.form-control {
+    background-color: #eee;
+    border-style: none;
+}
+
+.checkbox {
+    display: inline-block;
+}
+
+input[type=checkbox] {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    -webkit-appearance: none;
+    outline-style: none;
+    font-family: inherit;
+    display: block;
+    font-size: 16px;
+    margin: 0 0 1rem 0;
+    padding: 0.8rem;
+    /* height:2.750rem;*/
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    zoom: 1;
+    color: inherit;
+    -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+.navbar {
+    -webkit-transition: background-color 0.6s, ease-out 0s;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.3s ease-out;
+    z-index: 9999;
+}
+
+.nav {
+    text-transform: lowercase;
+}
+
+#menu-primary-menu li:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-static-top {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.navbar-transparent .navbar-nav>.active>a,
+.navbar-transparent .navbar-nav>.active>a:focus,
+.navbar-transparent .navbar-nav>.active>a:hover,
+.navbar-transparent .navbar-nav>li>a:hover,
+.navbar-transparent .navbar-nav>li>a:focus,
+.navbar-transparent .navbar-nav>.active>a {
+    color:#fff;
+    opacity:0.8;
+    background-color: inherit;
+}
+
+.opaque .navbar-nav>.active>a,
+.opaque .navbar-nav>.active>a:focus,
+.opaque .navbar-nav>.active>a:hover,
+.opaque .navbar-nav>li>a:hover,
+.opaque .navbar-nav>li>a:focus,
+.opaque .navbar-nav>.active>a {
+    color:#315374;
+    opacity:1;
+    background-color: inherit;
+}
+
+.navbar-brand {
+    height: auto;
+    padding: 10px;
+}
+
+.navbar-brand>img {
+    height: 50px;
+}
+
+    .navbar-transparent {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
+        border: none;
+    }
+    .opaque {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .navbar-transparent .navbar-nav>li>a {
+        color: white;
+    }
+    .navbar-nav>li>a {
+        padding: 0px 15px;
+    }
+
+.navbar-nav>li>a{
+    font-size:12px;
+}
+
+.opaque .navbar-nav>li>a {
+    color: #a4a4a4;
+}
+
+.admin-bar .navbar {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .navbar {
+    top: 32px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+    /*    margin-top: 50px;*/
+    /*    background: #a4a4a4;*/
+    color: white;
+    background-color: #a4a4a4;
+}
+
+.site-footer .container {
+    border-top: 2px solid #a4a4a4;
+    padding: 25px 15px;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.site-footer hr {
+    margin: 0.5em 0;
+}
+
+.footer-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu li {
+    display: block;
+    list-style-type: none;
+}
+
+
+/*
+.footer-menu li a {
+    border-left: 1px solid white;
+    padding: 0 8px;
+}
+*/
+
+.footer-menu > li:first-child > a {
+    border-left: none;
+    padding: 0 8px 0 0;
+}
+
+
+/*--------------------------------------------------------------
+# Billboards
+--------------------------------------------------------------*/
+
+.billboard-item {
+    position: relative;
+}
+
+.billboard-item:hover .billboard-item-hover {
+    opacity: 1;
+}
+
+#smi-billboard {
+    padding: 60px 0px;
+}
+
+.billboard-item-hover {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+@media (max-width:1024px) {
+    .billboard-item-hover {
+        opacity: 1;
+    }
+}
+
+.billboard-child {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.same-height {
+    min-height: 428px;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.container-video {
+    max-width: 850px;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 768px){
+    .container-video{
+        padding:50px 0;
+    }
+}
+hr {
+    border-top: 1px solid;
+}
+
+.white-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    color: #333;
+    padding: 10px 15px;
+}
+
+#video-billboard{
+    background-color:#315374;
+}
+
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+.btn {
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-size: 20px;
+    word-wrap: break-word;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+    white-space: normal;
+}
+
+.btn:focus {
+    color: white;
+}
+
+.btn-lg {
+    font-size: 22px;
+    padding: 10px 30px;
+}
+
+.full {
+    width: 100%;
+}
+
+.btn-white {
+    background-color: transparent;
+    border: 4px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-white:hover {
+    background: white;
+    color: #000;
+}
+
+.btn-black {
+    background-color: black;
+    border: 4px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-black:hover {
+    background: white;
+    border: 4px solid black;
+    color: #000;
+}
+
+.btn-black-white {
+    background-color: transparent;
+    border: 4px solid black;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-black-white:hover {
+    background: black;
+    border: 4px solid black;
+    color: white;
+}
+
+.container-md{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-xs {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.smi-btn {
+    margin: 15px 0;
+}
+
+.slideable {
+    display: none;
+}
+
+.slideable-close-button {
+    color:white;
+    font-size:48px;
+    margin:30px 50px 0px 0px;
+    position:absolute;
+    right:0px;
+    float:right!important;
+    z-index: 999;
+}
+
+.slideable-close-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+/*--------------------------------------------------------------
+# Word Break
+--------------------------------------------------------------*/
+
+#primary,
+#secondary {
+    -ms-word-break: break-word;
+    word-break: break-word;
+    word-break: break-word;
+}
+
+/*--------------------------------------------------------------
+Text Styles
+--------------------------------------------------------------*/
+
+.description-box{
+    background-color: rgba(255,255,255,0.85);
+    text-align: left;
+    padding: 10px 20px 10px 20px;
+    margin: 10px -30px 0px -30px;
+    color: #000;
+}
+
+.titles {
+    margin: 25px 0;
+}
+
+.subtitles {
+    text-align: left;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.whitespace{
+    white-space: pre-wrap;
+}
+
+
+/*--------------------------------------------------------------
+# Spacing
+--------------------------------------------------------------*/
+
+.header-child {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 120px 20px 100px;
+}
+
+.header-lg {
+    min-height: 100vh;
+}
+
+.header-md {
+    min-height: 75vh;
+}
+
+.header-sm {
+    min-height: 50vh;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.pad15-10 {
+    padding: 15px 10px;
+}
+
+.pad25 {
+    padding: 25px 0;
+}
+
+.margin25{
+    margin:25px 0px;
+}
+
+.desc-titles{
+    padding:50px 0px 200px 0px;
+}
+
+i {
+    margin: 10px 0;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.no-height{
+    min-height: 0px;
+}
+
+#pricing-billboard p, 
+.description-box p{
+    min-height: 22px;
+    margin:0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget {
+    margin: 0 0 1.5em;
+}
+
+
+/* Make sure select elements fit in widgets. */
+
+.widget select {
+    max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.sticky {
+    display: block;
+}
+
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+.infinite-scroll .posts-navigation,
+
+/* Older / Newer Posts Navigation (always hidden) */
+
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+
+/* Make sure embeds and iframes fit their containers. */
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Text Aligns
+--------------------------------------------------------------*/
+
+.textcenter {
+    text-align: center;
+}
+
+.textright {
+    text-align: right;
+}
+
+.textleft {
+    text-align: left;
+}
+
+
+/*--------------------------------------------------------------
+Media Queries 
+--------------------------------------------------------------*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .header-lg {
+        min-height:428px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    .xl-background {
+        background-attachment: fixed;
+    }
+    .description-box {
+        margin-bottom: 50px;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {
+    .right-desk {
+        float: right;
+    }
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {}

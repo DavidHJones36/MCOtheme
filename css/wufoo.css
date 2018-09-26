@@ -1,0 +1,167 @@
+Title : Wufoo Form Structure
+URL : http://www.wufoo.com
+
+- - - - - - - - - - - - - - - - - - - - - */
+*, *:before, *:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+wufoobody {
+  margin: 17px 0 15px 0;
+  padding: 0;
+  text-align: center;
+  font-size: small;
+  font-family: "Helvetica Neue", Helvetica; }
+
+wufooheader {
+  display: block; }
+
+.form-group{
+    margin-bottom:15px;   
+}
+.full-size{
+    position:relative;
+    float:left;
+    width:100%
+}
+.three-quarters{
+    position:relative;
+    padding:0 15px;
+    width:75%;
+}
+.half-size{
+    position:relative;
+    float:left;
+    width:50%;
+    padding: 0 15px;
+}
+.form-field{
+    width:100%;
+    border:none;
+    height:auto;
+}
+
+.wufoorow{
+    margin-left:-15px;
+    margin-right: -15px;
+    content: "";
+    display: table;
+}
+
+form.email{
+width:50%;
+}
+
+form.wufoo {
+  margin: 20px 14px 0 14px;
+  padding: 0 0 20px 0;
+  position: relative; }
+
+.hide{
+display: none !important;}
+
+input[type="button"], .wufoo-btn {
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-size: 20px;
+  word-wrap: break-word;
+  white-space: initial;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  
+    border: 4px solid;
+ 
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width:100%;
+}
+
+input[type="button"], .btn-color{
+background-color: transparent;
+    border-color: #33CEFF;
+    color: #33CEFF;
+}
+
+input[type="button"]:hover, .btn-color:hover{
+  background-color:#3aa3e6;
+  border-color:#3aa3e6;
+  color:#ffffff;
+}
+
+.wufooerror{
+    background-color:#e63a4d;
+    padding:10px;
+    margin-top:-10px;
+}
+
+/* ----- INFO ----- */
+.info {
+  display: inline-block;
+  clear: both;
+  margin: 0 0 5px 0;
+  border-bottom: 1px dotted #ccc; }
+
+.info[class] {
+  display: block; }
+
+.info h2 {
+  font-weight: normal;
+  font-size: 160%;
+  margin: 0 0 5px 0;
+  clear: left; }
+
+.info div {
+  font-size: 95%;
+  line-height: 135%;
+  color: #555; }
+
+/* ----- FIELDS ----- */
+input.text, input.search, input.file, textarea.textarea, select.select {
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  background-color:#eee }
+
+input.text, input.search, textarea.textarea {
+  border:none;
+  background: #eee url(/images/fieldbg.gif) repeat-x top; }
+
+textarea.textarea {
+  width: 293px;
+  min-width: 100%;
+  /* IE8 Textarea Scroll Bug */
+  max-width: 100%; }
+
+input.small, select.small {
+  width: 25%; }
+
+input.medium, select.medium {
+  width: 50%;
+  }
+
+input.large, select.large {
+  width: 100%; }
