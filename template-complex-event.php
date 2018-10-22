@@ -296,13 +296,13 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                                     <div class="row">
                                         <?php for ($x=0; $x<=$session_count; $x++){
                                         for ($y=0; $y<=2; $y++){
-                                            if ($event_sessions[$x][0] != '' && $y==0){ ?>
-                                            <div class="col-xs-4 no-pad" style="margin-top:10px">
+                                            if ($event_sessions[$x][0] != '' && $x==0){ ?>
+                                            <div class="col-xs-4 no-pad">
                                                 <p class="uppercase">
                                                     <?php echo $event_sessions[$x][$y]; ?>
                                                 </p>
                                             </div>
-                                            <?php }elseif($event_sessions[$x][0] != '' && $y!=0){ ?>
+                                            <?php }elseif($event_sessions[$x][0] != '' && $x!=0){ ?>
                                                 <div class="col-xs-4 no-pad" style="margin-top:10px">
                                                     <p>
                                                         <?php echo $event_sessions[$x][$y]; ?>
