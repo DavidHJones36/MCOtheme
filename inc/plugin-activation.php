@@ -102,7 +102,7 @@ function my_theme_register_required_plugins() {
 		),
         array(
 			'name'     => 'Github Updater', // The plugin name.
-			'slug'     => 'afragen-github-updater-53b86d4', // The plugin slug (typically the folder name).
+			'slug'     => 'github-updater-develop', // The plugin slug (typically the folder name).
 			'source'   => get_stylesheet_directory() . '/inc/github-updater-develop.zip', // The plugin source.
 			'required' => true, // If false, the plugin is only 'recommended' instead of required.
 		),
