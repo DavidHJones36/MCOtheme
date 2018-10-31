@@ -57,7 +57,8 @@ get_header(); ?>
                     <?php echo $contact_form; ?>
                 </div>
                 <!-- #primary -->
-                <div id="primary" class="col-lg-4 col-md-4" style="margin:1.5em 0 0">
+                <div id="primary" class="col-lg-4 col-md-4">
+<!--                     style="margin:1.5em 0 0"-->
                     <p>For more information about MCO <?php echo $campus; ?>, send us a message using this form and we&#8217;ll get back to you!</p>
                     <p>You can also reach us at <strong>706.262.8841</strong></p>
                     <p><strong>MCO <?php echo $campus; ?></strong>

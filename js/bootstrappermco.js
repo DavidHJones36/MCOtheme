@@ -1,20 +1,19 @@
 //smooth scroll on anchor clicks
 jQuery(document).ready(function ($) {
     $('a[href*="#"]:not([href="#"])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 if ($("#navbar").hasClass("navbar-fixed-top")) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - $('#navbar').outerHeight()
-                    }, 1000);
+                    }, 800);
                     return false;
-                }
-                    else {
+                } else {
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000);
+                    }, 800);
                     return false;
                 }
             }
@@ -41,26 +40,25 @@ jQuery(document).ready(function ($) {
 //})(jQuery);
 
 
-(function($) {
+(function ($) {
+    $('.slideable-show-button').click(function () {
 
-  $('.slideable-show-button').click(function(){
+        var target = $(this).attr('data-target');
 
-    var target = $(this).attr('data-target');
+        if ($(this).hasClass('active') === false) {
+            $('.slideable').slideUp();
+            $('.slideable-show-button').removeClass("active");
 
-    if ( $(this).hasClass('active') == false ) {
-      $('.slideable').slideUp();
-      $('.slideable-show-button').removeClass("active");
+            $(target).slideDown();
+            $(this).addClass("active");
+        }
 
-      $(target).slideDown();
-      $(this).addClass("active");
-    }
+    });
 
-  });
-
-  $('.slideable-close-button').click(function(){
-    // target = $(this).attr('data-target');
-    $('.slideable').slideUp();
-    $('.slideable-show-button').removeClass("active");
-  });
+    $('.slideable-close-button').click(function () {
+        // target = $(this).attr('data-target');
+        $('.slideable').slideUp();
+        $('.slideable-show-button').removeClass("active");
+    });
 
 })(jQuery);
