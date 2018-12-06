@@ -8,7 +8,7 @@
  */
 
 global $bmco_options;
-        $fixed = ($bmco_options['opt-navbar-fixed'] == '1' ? 'navbar-fixed-top' : 'navbar-static-top');
+        $fixed = ($bmco_options['opt-navbar-fixed'] == '1' ? 'fixed-top' : '');
         $transparent = ($bmco_options['opt-navbar-transparent'] == '1' ? 'navbar-transparent' : 'opaque' );
         $logo = $bmco_options['opt-logo']['url'];
         $transparent_logo = $bmco_options['opt-transparent-logo']['url'];
@@ -51,35 +51,31 @@ global $bmco_options;
             
 
         </style>
-        <?php if ($fixed == 'navbar-fixed-top'){ ?>
+        <?php if ($fixed == 'fixed-top'){ ?>
             <script>jQuery(document).ready(function ($) {
-                    $(window).scroll(_.throttle(function () {
+                    $(window).scroll(function () {
                             var scroll = $(window).scrollTop();
                             var logo = '<?php echo $logo; ?>';
                             <?php if ($transparent != 'opaque'){ ?>
                                 var transparent = '<?php echo $transparent_logo; ?>';
                             <?php } ?>
                             if (scroll > 0) /*height in pixels when the navbar becomes non opaque*/ {
-                                $('.navbar-fixed-top').addClass('opaque');
+                                $('.fixed-top').addClass('opaque');
                                 $("#navLogo").attr('src', logo);
                             }
                             else {
-                                $('.navbar-fixed-top').removeClass('opaque');
+                                $('.fixed-top').removeClass('opaque');
                                 $("#navLogo").attr('src', transparent);
                             }
-                        },50))
+                        })
                     });
             </script>
         <?php } ?>
 
     <body <?php body_class();?>>
-            <nav role="navigation">
-                <div id="navbar" class="navbar navbar-default <?php echo $transparent;?> <?php echo $fixed;?>">
-                    <div class="container">
-                        <!--.navbar-toggle is used as the toggle for collapsed navbar content-->
-                        <div id='navbar-header' class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                            <?php
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-light <?php echo $transparent;?> <?php echo $fixed;?>">
+                <div class="container">
+              <?php
                                 if($logo !== ''){ ?> <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="homepage">
                                         <div class="logo">
                                             <img id="navLogo" src="<?php echo $current_logo; ?>" style="height:<?php echo $logo_height ?>px;">
@@ -91,26 +87,23 @@ global $bmco_options;
                                         <?php bloginfo( 'name' ) ?>
                                     </a>
                                     <?php } ?>
-                        </div>
-                        <div class="navbar-collapse collapse navbar-responsive-collapse">
-                            <?php
-
-                                    $args = array(
-                                        'theme_location' => 'primary',
-                                        'depth'      => 1,
-                                        'container'  => false,
-                                        'menu_class'     => 'nav navbar-nav navbar-right',
-                                        'walker'     => new Bootstrap_Walker_Nav_Menu()
-                                        );
-
-
-                                      if (has_nav_menu('primary')){        
-                                        wp_nav_menu($args);
-                                      }
-
-					?>
-                        </div>
-                    </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapser" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-collapse collapse justify-content-end" id="navbarCollapser">
+                  <?php wp_nav_menu( array(
+	'theme_location'  => 'primary',
+	'depth'	          => 1, // 1 = no dropdowns, 2 = with dropdowns.
+	'container'       => 'div',
+	'container_class' => 'justify-content-end',
+	'container_id'    => 'MCOnav',
+	'menu_class'      => 'navbar-nav mr-auto',
+	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+	'walker'          => new WP_Bootstrap_Navwalker(),
+) ); ?>
+                
+                
+              </div>
                 </div>
             </nav>
             <!-- #masthead -->

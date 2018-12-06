@@ -132,7 +132,7 @@ function bootstrappermco_scripts() {
     
     wp_enqueue_style( 'wufoo-styles', get_template_directory_uri() . '/css/wufoo.css', array(), null, 'all' );
     
-	wp_enqueue_style( 'bootstrappermco-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'MCOtheme-style', get_stylesheet_uri() );
     
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), null, 'all' );
     
@@ -140,9 +140,8 @@ function bootstrappermco_scripts() {
     
     wp_enqueue_script( 'underscore-js', get_template_directory_uri() . '/js/underscore-min.js', array('jquery'), null, true );
     
-//    global $bmco_options;  if ($bmco_options['opt-navbar-transparent']){  wp_enqueue_script( 'navbarscroll-js', get_template_directory_uri() . '/js/navbarscroll.js', array('jquery'), null, true );}
     
-      wp_enqueue_script( 'bootstrappermco-js', get_template_directory_uri() . '/js/bootstrappermco.js', array('jquery'), null, true );
+    wp_enqueue_script( 'bootstrappermco-js', get_template_directory_uri() . '/js/bootstrappermco.js', array('jquery'), null, true );
 
 	wp_enqueue_script( 'bootstrappermco-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

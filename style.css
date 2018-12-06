@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/DavidHJones36/MCOtheme
 Author: David J
 Author URI: http://mcoaugusta.org
 Description: Theme for MCO Sites
-Version: 2.0.5
+Version: 2.0.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: bootstrappermco
@@ -290,19 +290,21 @@ select {
     height: 50px;
 }
 
-    .navbar-transparent {
-        background: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
-        border: none;
-    }
-    .opaque {
-        background: rgba(255, 255, 255, 0.9);
-    }
-    .navbar-transparent .navbar-nav>li>a {
-        color: white;
-    }
-    .navbar-nav>li>a {
-        padding: 0px 15px;
-    }
+
+.navbar-transparent {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
+    border: none;
+}
+
+.opaque {
+    background: rgba(255, 255, 255, 0.9);
+}
+.navbar-transparent .navbar-nav>li>a {
+    color: white;
+}
+.navbar-nav>li>a {
+    padding: 0px 15px;
+}
 
 .navbar-nav>li>a{
     font-size:12px;

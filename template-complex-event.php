@@ -297,31 +297,31 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                                         <?php for ($x=0; $x<=$session_count; $x++){
                                         for ($y=0; $y<=2; $y++){
                                             if ($x==0 && $y==0){?>
-                                            <div class="col-xs-4 no-pad">
+                                            <div class="col-sm-4 no-pad">
                                                 <p class="uppercase">
                                                     <?php echo $event_sessions[$x][$y]; ?>
                                                 </p>
                                             </div>
                                             <?php }elseif ($x==0){?>
-                                            <div class="col-xs-4 no-pad">
+                                            <div class="col-sm-4 no-pad">
                                                 <p>
                                                     <?php echo $event_sessions[$x][$y]; ?>
                                                 </p>
                                             </div>
                                             <?php }elseif($event_sessions[$x][0] != '' && $y==0){ ?>
-                                                <div class="col-xs-4 no-pad" style="margin-top:10px">
+                                                <div class="col-sm-4 no-pad" style="margin-top:10px">
                                                     <p class="uppercase">
                                                         <?php echo $event_sessions[$x][$y]; ?>
                                                     </p>
                                                 </div>
                                                 <?php }elseif($event_sessions[$x][0] == ''){ ?>
-                                                <div class="col-xs-4 no-pad">
+                                                <div class="col-sm-4 no-pad">
                                                     <p>
                                                         <?php echo $event_sessions[$x][$y]; ?>
                                                     </p>
                                                 </div>
                                                 <?php }else{ ?>
-                                                    <div class="col-xs-4 no-pad" style="margin-top:10px">
+                                                    <div class="col-sm-4 no-pad" style="margin-top:10px">
                                                         <p>
                                                             <?php echo $event_sessions[$x][$y]; ?>
                                                         </p>

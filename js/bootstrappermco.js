@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-                if ($("#navbar").hasClass("navbar-fixed-top")) {
+                if ($("#navbar").hasClass("fixed-top")) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - $('#navbar').outerHeight()
                     }, 800);
