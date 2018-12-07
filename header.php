@@ -51,7 +51,7 @@ global $bmco_options;
             
 
         </style>
-        <?php if ($fixed == 'fixed-top'){ ?>
+        <?php if ($fixed == 'fixed-top' && $transparent !='opaque'){ ?>
             <script>jQuery(document).ready(function ($) {
                     $(window).scroll(function () {
                             var scroll = $(window).scrollTop();
