@@ -146,7 +146,7 @@ get_header(); ?>
         <div id="first-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-4">
+                    <div class="no-pad billboard-item col-sm">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $billboard1_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -158,7 +158,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="no-pad billboard-item col-sm-4">
+                    <div class="no-pad billboard-item col-sm">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $billboard2_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -170,7 +170,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="no-pad billboard-item col-sm-4">
+                    <div class="no-pad billboard-item col-sm">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $billboard3_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -217,7 +217,7 @@ get_header(); ?>
         <div id="second-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-6">
+                    <div class="no-pad billboard-item col-sm">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $billboard4_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -229,7 +229,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="no-pad billboard-item col-sm-6">
+                    <div class="no-pad billboard-item col-sm">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $billboard5_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -247,7 +247,7 @@ get_header(); ?>
         <div id="third-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-12">
+                    <div class="no-pad billboard-item col-12">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $billboard6_image ?>) center center no-repeat; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -268,7 +268,7 @@ get_header(); ?>
         <div id="first-event-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-12">
+                    <div class="no-pad billboard-item col-12">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $event1_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -320,7 +320,7 @@ get_header(); ?>
         <div id="second-event-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-12">
+                    <div class="no-pad billboard-item col-12">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $event3_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -371,7 +371,7 @@ get_header(); ?>
         <div id="third-event-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-12">
+                    <div class="no-pad billboard-item col-12">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $event5_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -455,7 +455,7 @@ get_header(); ?>
         <div id="fifth-event-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-12">
+                    <div class="no-pad billboard-item col-12">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $event8_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">
@@ -506,7 +506,7 @@ get_header(); ?>
         <div id="sixth-event-billboard">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="no-pad billboard-item col-sm-12">
+                    <div class="no-pad billboard-item col-12">
                         <div class="xs-background billboard-child same-height" style="background: url(<?php echo $event10_image ?>) center center; background-size:cover;"></div>
                         <div class="billboard-item-hover">
                             <div class="billboard-child">

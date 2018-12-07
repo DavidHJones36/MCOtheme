@@ -61,9 +61,13 @@ global $bmco_options;
                             <?php } ?>
                             if (scroll > 0) /*height in pixels when the navbar becomes non opaque*/ {
                                 $('.fixed-top').addClass('opaque');
+                                $('.fixed-top').addClass('navbar-light');
+                                $('.fixed-top').removeClass('navbar-dark');
                                 $("#navLogo").attr('src', logo);
                             }
                             else {
+                                $('.fixed-top').removeClass('navbar-light');
+                                $('.fixed-top').addClass('navbar-dark');
                                 $('.fixed-top').removeClass('opaque');
                                 $("#navLogo").attr('src', transparent);
                             }
@@ -73,7 +77,7 @@ global $bmco_options;
         <?php } ?>
 
     <body <?php body_class();?>>
-            <nav id="navbar" class="navbar navbar-expand-lg navbar-light <?php echo $transparent;?> <?php echo $fixed;?>">
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-dark <?php echo $transparent;?> <?php echo $fixed;?>">
                 <div class="container">
               <?php
                                 if($logo !== ''){ ?> <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="homepage">

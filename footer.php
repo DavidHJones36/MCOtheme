@@ -22,7 +22,7 @@ $bmco_instagram=$bmco_options['instagram'];
     <footer id="secondary" class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md">
                     <h4>MCO <?php echo $bmco_campus; ?></h4>
                     <hr>
                     <p class="no-margin-bottom">
@@ -51,27 +51,27 @@ $bmco_instagram=$bmco_options['instagram'];
                         <?php } ?>
                 </div>
 -->
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
+                <div class="col-md"></div>
+                <div class="col-md">
                 <h4>Get in touch with us</h4>
-                        <hr>
-                        <ul class="list-inline" style="color:white">
-                            <li>
+                    <hr>
+                    <div class="row">
+                            <div class="col-2">
                                 <a href="<?php echo $bmco_facebook ?>" >
-                                    <i class="fa fa-facebook-square fa-lg"></i>
+                                    <i class="fa fa-facebook-square fa-2x"></i>
                                 </a>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-2">
                                 <a href="<?php echo $bmco_twitter ?>" >
-                                    <i class="fa fa-twitter-square fa-lg"></i>
+                                    <i class="fa fa-twitter-square fa-2x"></i>
                                 </a>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="col-2">
                                 <a href="<?php echo $bmco_instagram ?>" >
-                                    <i class="fa fa-instagram fa-lg"></i>
+                                    <i class="fa fa-instagram fa-2x"></i>
                                 </a>
-                            </li>
-                    </ul>
+                            </div>
+                    </div>
                 </div>
             </div>
             <!-- .row -->

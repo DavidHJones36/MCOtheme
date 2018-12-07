@@ -220,16 +220,18 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                         <div id="speaker-info" class="slideable">
                             <div id="close-button" class="slideable-close-button">X</div>
                             <div class="container">
-                                <div class="col-sm-12">
+                                <div class="col-12">
                                     <h1 class="subtitles desc-titles" <?php if ($speaker_info=='' ) { ?> style="padding:50px 0px 300px 0px" <?php } ?> ><?php echo $speaker_name; ?></h1> </div>
-                                <div class="col-sm-8"></div>
-                                <div class="col-sm-4">
-                                    <?php if ($speaker_info != '') { ?>
-                                        <div class="description-box">
-                                            <p class="whitespace"><?php echo $speaker_info; ?>
-                                            </p>
-                                        </div>
-                                        <?php } ?>
+                                <div class="row">
+                                    <div class="col-md-8"></div>
+                                    <div class="col-md-4">
+                                        <?php if ($speaker_info != '') { ?>
+                                            <div class="description-box">
+                                                <p class="whitespace"><?php echo $speaker_info; ?>
+                                                </p>
+                                            </div>
+                                            <?php } ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -238,13 +240,15 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                         <div id="theme-info" class="slideable">
                             <div id="close-button" class="slideable-close-button">X</div>
                             <div class="container">
-                                <div class="col-sm-12">
+                                <div class="col-12">
                                     <h1 class="subtitles desc-titles"><?php echo $c_theme; ?></h1> </div>
-                                <div class="col-sm-8"></div>
-                                <div class="col-sm-4">
-                                    <div class="description-box">
-                                        <p class="whitespace"><?php echo $c_theme_desc; ?>
-                                        </p>
+                                <div class="row">
+                                    <div class="col-md-8"></div>
+                                    <div class="col-md-4">
+                                        <div class="description-box">
+                                            <p class="whitespace"><?php echo $c_theme_desc; ?>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +258,7 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                 <div id="speaker-theme-billboard">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="no-pad billboard-item col-sm-6">
+                            <div class="no-pad billboard-item col-sm">
                                 <div class="xs-background billboard-child same-height" style="background: url(<?php echo $speaker_button_img; ?>) center center; background-size:cover;"></div>
                                 <div class="billboard-item-hover">
                                     <div class="billboard-child">
@@ -266,7 +270,7 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                                     </div>
                                 </div>
                             </div>
-                            <div class="no-pad billboard-item col-sm-6">
+                            <div class="no-pad billboard-item col-sm">
                                 <div class="xs-background billboard-child same-height" style="background: url(<?php echo $theme_img; ?>) center center; background-size:cover;"> 
                                     <div class="billboard-child">
                                         <div class="container-md">
@@ -290,10 +294,10 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                 <div id="pricing-billboard">
                     <div class="container">
                         <div class="row pad25">
-                            <div class="col-sm-6">
+                            <div class="col-sm">
                                 <h2 class="titles">Schedule</h2>
                                 <div class="container-fluid">
-                                    <div class="row">
+                                    <div class="row mobile-dates">
                                         <?php for ($x=0; $x<=$session_count; $x++){
                                         for ($y=0; $y<=2; $y++){
                                             if ($x==0 && $y==0){?>
@@ -309,8 +313,14 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                                                 </p>
                                             </div>
                                             <?php }elseif($event_sessions[$x][0] != '' && $y==0){ ?>
-                                                <div class="col-sm-4 no-pad" style="margin-top:10px">
+                                                <div class="col-sm-4 no-pad margin-top10">
                                                     <p class="uppercase">
+                                                        <?php echo $event_sessions[$x][$y]; ?>
+                                                    </p>
+                                                </div>
+                                                <?php }elseif($event_sessions[$x][$y] == ''){ ?>
+                                                <div class="col-sm-4 no-pad blank">
+                                                    <p>
                                                         <?php echo $event_sessions[$x][$y]; ?>
                                                     </p>
                                                 </div>
@@ -321,7 +331,7 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                                                     </p>
                                                 </div>
                                                 <?php }else{ ?>
-                                                    <div class="col-sm-4 no-pad" style="margin-top:10px">
+                                                    <div class="col-sm-4 no-pad margin-top10">
                                                         <p>
                                                             <?php echo $event_sessions[$x][$y]; ?>
                                                         </p>
@@ -332,7 +342,7 @@ $vid_banner=rwmb_meta('bmco_vid_color');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm">
                                 <h2 class="titles">Pricing</h2>
                                 <div class="container-fluid">
                                     <div class="row">

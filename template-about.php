@@ -87,10 +87,10 @@ if (count($history_banner) > '0'){
     <div id="smi-billboard">
         <div class="container-fluid">
             <div class="row">
-                    <div class="about-billboard-item col-sm-6" >
+                    <div class="about-billboard-item col-sm" >
                         <img src = "<?php bloginfo('template_directory'); ?>/img/smi-logo.png">
                     </div>
-                    <div class=" about-billboard-item col-sm-6">
+                    <div class=" about-billboard-item col-sm">
                         <h3 class="titles">// <?php echo $smi_title; ?> //</h3>
                     <p> <?php echo $smi_desc; ?></p>
                     </div>
@@ -100,11 +100,9 @@ if (count($history_banner) > '0'){
     <div id="history-billboard" class="xl-background" style="<?php echo $history_url; ?> color: #ffffff;">
         <div class="overlay-dark pad25">
         <div class="container">
-            <div class="row">
+            <div class="row textcenter">
                 <h3 class="titles">// history //</h3>
-                <div class="textcenter">
                     <p> <?php echo $history_text; ?></p>
-                </div>
             </div>
         </div>
         </div>

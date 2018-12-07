@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/DavidHJones36/MCOtheme
 Author: David J
 Author URI: http://mcoaugusta.org
 Description: Theme for MCO Sites
-Version: 2.0.6
+Version: 3.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: bootstrappermco
@@ -245,7 +245,7 @@ select {
     z-index: 9999;
 }
 
-.nav {
+.nav-link {
     text-transform: lowercase;
 }
 
@@ -259,26 +259,26 @@ select {
     left: 0;
 }
 
-.navbar-transparent .navbar-nav>.active>a,
-.navbar-transparent .navbar-nav>.active>a:focus,
-.navbar-transparent .navbar-nav>.active>a:hover,
-.navbar-transparent .navbar-nav>li>a:hover,
-.navbar-transparent .navbar-nav>li>a:focus,
-.navbar-transparent .navbar-nav>.active>a {
+.navbar-transparent .navbar-nav .nav-link{
     color:#fff;
-    opacity:0.8;
+    opacity:1;
     background-color: inherit;
 }
 
-.opaque .navbar-nav>.active>a,
-.opaque .navbar-nav>.active>a:focus,
-.opaque .navbar-nav>.active>a:hover,
-.opaque .navbar-nav>li>a:hover,
-.opaque .navbar-nav>li>a:focus,
-.opaque .navbar-nav>.active>a {
-    color:#315374;
+.opaque .navbar-nav .nav-link{
+    color:#282828;
     opacity:1;
     background-color: inherit;
+}
+
+.navbar-transparent .navbar-nav .nav-link:focus, .navbar-transparent .navbar-nav .nav-link:hover{
+    color:#fff;
+    opacity: 0.8;
+}
+
+.opaque .navbar-nav .nav-link:focus, .opaque .navbar-nav .nav-link:hover{
+    color:#282828;
+    opacity: 0.8;
 }
 
 .navbar-brand {
@@ -291,15 +291,14 @@ select {
 }
 
 
-.navbar-transparent {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
+.navbar-transparent .navbar-nav {
     border: none;
 }
 
 .opaque {
     background: rgba(255, 255, 255, 0.9);
 }
-.navbar-transparent .navbar-nav>li>a {
+.navbar-transparent .navbar-nav .navbar-nav>li>a {
     color: white;
 }
 .navbar-nav>li>a {
@@ -310,7 +309,7 @@ select {
     font-size:12px;
 }
 
-.opaque .navbar-nav>li>a {
+.opaque .navbar-nav .navbar-nav>li>a {
     color: #a4a4a4;
 }
 
@@ -891,15 +890,22 @@ object {
 --------------------------------------------------------------*/
 
 .textcenter {
+    justify-content: center;
     text-align: center;
 }
 
 .textright {
+    justify-content: end;
     text-align: right;
 }
 
 .textleft {
+    justify-content: start;
     text-align: left;
+}
+
+.textcenter .row{
+    justify-content: inherit;
 }
 
 
@@ -915,9 +921,15 @@ Media Queries
 
 /* Extra Small Devices, Phones */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     .header-lg {
         min-height:428px;
+    }
+    .blank{
+        display: none;
+    }
+    #pricing-billboard .mobile-dates .uppercase{
+        margin-top: 10px;
     }
 }
 
@@ -939,6 +951,9 @@ Media Queries
 @media only screen and (min-width: 992px) {
     .right-desk {
         float: right;
+    }
+    .margin-top10{
+        margin-top:10px;
     }
 }
 

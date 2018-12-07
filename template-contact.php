@@ -53,11 +53,11 @@ get_header(); ?>
         <div class="container">
             <h1>CONTACT US</h1>
             <div class="row">
-                <div id="primary" class="col-md-8 col-lg-8">
+                <div id="primary" class="col-md-8">
                     <?php echo $contact_form; ?>
                 </div>
                 <!-- #primary -->
-                <div id="primary" class="col-lg-4 col-md-4">
+                <div id="primary" class="col-md-4">
 <!--                     style="margin:1.5em 0 0"-->
                     <p>For more information about MCO <?php echo $campus; ?>, send us a message using this form and we&#8217;ll get back to you!</p>
                     <p>You can also reach us at <strong>706.262.8841</strong></p>

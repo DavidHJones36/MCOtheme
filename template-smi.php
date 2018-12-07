@@ -157,8 +157,6 @@ $smi_video_url = (rwmb_meta('bmco_smi_video_url') != '' ? rwmb_meta('bmco_smi_vi
         <div id="video-billboard" style="background-color:#315376; color:white">
             <div class="container">
                 <div class="row textcenter">
-                    <header <?php if ($smi_video_url == '') { ?>class="header-md"<?php } ?>>
-            <?php if ($smi_video_url != '') { ?>
                     <div class="container">
                         <div class="row">
                             <div class="no-pad billboard-item col-md-12">
@@ -170,7 +168,6 @@ $smi_video_url = (rwmb_meta('bmco_smi_video_url') != '' ? rwmb_meta('bmco_smi_vi
                             </div>
                         </div>
                     </div>
-                    <?php } ?></header>
                 </div>
             </div>
         </div>
@@ -182,20 +179,24 @@ $smi_video_url = (rwmb_meta('bmco_smi_video_url') != '' ? rwmb_meta('bmco_smi_vi
                     <div>
                         <hr> </div>
                     <div class="container-fluid">
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-external-link fa-5x"></i>
-                            <p> Sign in to Managed Missions</p>
+                        <div class="row">
+                            <div class="col-sm pad15-10"> <i class="fa fa-external-link fa-5x"></i>
+                                <p> Sign in to Managed Missions</p>
+                            </div>
+                            <div class="col-sm pad15-10"> <i class="fa fa-info-circle fa-5x"></i>
+                                <p> Fill in all travel and personal info</p>
+                            </div>
+                            <div class="col-sm pad15-10"> <i class="fa fa-keyboard-o fa-5x"></i>
+                                <p> Create your Public Profile</p>
+                            </div>
+                            <div class="col-sm pad15-10"> <i class="fa fa-users fa-5x"></i>
+                                <p> Click the “fundraising” tab to see your donors</p>
+                            </div>
                         </div>
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-info-circle fa-5x"></i>
-                            <p> Fill in all travel and personal info</p>
-                        </div>
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-keyboard-o fa-5x"></i>
-                            <p> Create your Public Profile</p>
-                        </div>
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-users fa-5x"></i>
-                            <p> Click the “fundraising” tab to see your donors</p>
-                        </div>
-                        <div class="col-sm-12 pad15-10"> <i class="fa fa-inbox fa-5x"></i>
-                            <p> Send thank-you’s to supporters</p>
+                        <div class="row">
+                            <div class="col-sm-12 pad15-10"> <i class="fa fa-inbox fa-5x"></i>
+                                <p> Send thank-you’s to supporters</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,20 +211,20 @@ $smi_video_url = (rwmb_meta('bmco_smi_video_url') != '' ? rwmb_meta('bmco_smi_vi
             <div class="container">
                 <div class="row textcenter">
                     <h2 class="titles">Support Raising</h2>
-                    <div>
-                        <hr> </div>
                     <div style="text-align:center" class="container-fluid">
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-user fa-5x"></i>
-                            <p>Copy of Passport</p>
-                        </div>
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-medkit fa-5x"></i>
-                            <p>Health release and Code of Conduct</p>
-                        </div>
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-usd fa-5x"></i>
-                            <p>$200 deposit non-refundable, tax-deductible</p>
-                        </div>
-                        <div class="col-sm-3 pad15-10"> <i class="fa fa-check fa-5x"></i>
-                            <p>Project Agreement</p>
+                        <div class="row">
+                            <div class="col-sm pad15-10"> <i class="fa fa-user fa-5x"></i>
+                                <p>Copy of Passport</p>
+                            </div>
+                            <div class="col-sm pad15-10"> <i class="fa fa-medkit fa-5x"></i>
+                                <p>Health release and Code of Conduct</p>
+                            </div>
+                            <div class="col-sm pad15-10"> <i class="fa fa-usd fa-5x"></i>
+                                <p>$200 deposit non-refundable, tax-deductible</p>
+                            </div>
+                            <div class="col-sm pad15-10"> <i class="fa fa-check fa-5x"></i>
+                                <p>Project Agreement</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,39 +234,41 @@ $smi_video_url = (rwmb_meta('bmco_smi_video_url') != '' ? rwmb_meta('bmco_smi_vi
             <div class="container">
                 <div class="row textcenter">
                     <h2 class="titles">Fundraising</h2>
-                    <div>
-                        <hr> </div>
-                    <div style="text-align:center" class="container-fluid">
-                        <div class="row">
-                            <h1 class="titles">Why</h1>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-anchor fa-5x"></i>
-                                <p>Raising support helps us to trust God to provide for all our needs.</p>
+                    <div class="container-fluid textcenter">
+                            <div class="row">
+                                <h1 class="titles">Why</h1>
                             </div>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-users fa-5x"></i>
-                                <p>Raising support helps us to build a prayer team.</p>
+                            <div class="row">
+                                <div class="col-sm pad15-10"> <i class="fa fa-anchor fa-5x"></i>
+                                    <p>Raising support helps us to trust God to provide for all our needs.</p>
+                                </div>
+                                <div class="col-sm pad15-10"> <i class="fa fa-users fa-5x"></i>
+                                    <p>Raising support helps us to build a prayer team.</p>
+                                </div>
+                                <div class="col-sm pad15-10"> <i class="fa fa-list-ol fa-5x"></i>
+                                    <p>Pride is the #1 reason we don’t want to raise support.</p>
+                                </div>
+                                <div class="col-sm pad15-10"> <i class="fa fa-envelope fa-5x"></i>
+                                    <p>Keep people connected to what God is doing in your life through updates.</p>
+                                </div>
                             </div>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-list-ol fa-5x"></i>
-                                <p>Pride is the #1 reason we don’t want to raise support.</p>
+                            <div class="row">
+                                <h1 class="titles">How</h1>
                             </div>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-envelope fa-5x"></i>
-                                <p>Keep people connected to what God is doing in your life through updates.</p>
+                            <div class="row">
+                                <div class="col-sm pad15-10"> <i class="fa fa-adjust fa-5x"></i>
+                                    <p>Letters to family and friends</p>
+                                </div>
+                                <div class="col-sm pad15-10"> <i class="fa fa-child fa-5x"></i>
+                                    <p>Babysitting</p>
+                                </div>
+                                <div class="col-sm pad15-10"> <i class="fa fa-book fa-5x"></i>
+                                    <p>Sunday school or organizational group</p>
+                                </div>
+                                <div class="col-sm pad15-10"> <i class="fa fa-car fa-5x"></i>
+                                    <p>Car wash</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h1 class="titles">How</h1>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-adjust fa-5x"></i>
-                                <p>Letters to family and friends</p>
-                            </div>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-child fa-5x"></i>
-                                <p>Babysitting</p>
-                            </div>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-book fa-5x"></i>
-                                <p>Sunday school or organizational group</p>
-                            </div>
-                            <div class="col-sm-3 pad15-10"> <i class="fa fa-car fa-5x"></i>
-                                <p>Car wash</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -273,42 +276,44 @@ $smi_video_url = (rwmb_meta('bmco_smi_video_url') != '' ? rwmb_meta('bmco_smi_vi
         <div class="xl-background" style="background-image:url(<?php echo $banner3_url; ?>); color: #ffffff;">
             <div class="header-child overlay-dark">
                 <div class="container white-container">
-                    <div class="col-sm-5">
-                        <h2 class="no-margin-top titles">Important Dates</h2>
-                        <p>
-                            <?php echo $info_date; ?> - Informational Meeting</p>
-                        <p>
-                            <?php echo $support_date; ?> - Support Meeting</p>
-                        <p>
-                            <?php echo $half_date; ?> - 50% Support Due</p>
-                        <p>
-                            <?php echo $pft_date; ?> - Prefield Training</p>
-                        <p>
-                            <?php echo $full_date; ?> - 100% Support Due</p>
-                        <p>
-                            <?php echo $trip_date; ?> - Trip Dates</p>
-                    </div>
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-5">
-                        <h2 class="no-margin-top titles">Helpful Links</h2>
-                        <?php  if ($file1_url != ''){ ?>
-                        <div><a href="<?php echo $file1_url; ?>" target="_blank">Health Release/Code of Conduct</a></div>
-                        <?php } 
-                        if ($file2_url != ''){?>
-                        <div><a href="<?php echo $file2_url; ?>" target="_blank">Project Agreement</a></div>
-                        <?php } 
-                        if ($file3_url != ''){?>
-                        <div><a href="<?php echo $file3_url; ?>" target="_blank">Team Covenant</a></div>
-                        <?php } 
-                        if ($file4_url != ''){?>
-                        <div><a href="<?php echo $file4_url; ?>" target="_blank">Guide to Financial Contributions</a></div>
-                        <?php } 
-                        if ($file5_url != ''){?>
-                        <div><a href="<?php echo $file5_url; ?>" target="_blank">Packing List</a></div>
-                        <?php } 
-                        if ($file6_url != ''){?>
-                        <div><a href="<?php echo $file6_url; ?>" target="_blank">Vaccinations</a></div>
-                        <?php }?>
+                    <div class="row">
+                        <div class="col-5">
+                            <h2 class="no-margin-top titles">Important Dates</h2>
+                            <p>
+                                <?php echo $info_date; ?> - Informational Meeting</p>
+                            <p>
+                                <?php echo $support_date; ?> - Support Meeting</p>
+                            <p>
+                                <?php echo $half_date; ?> - 50% Support Due</p>
+                            <p>
+                                <?php echo $pft_date; ?> - Prefield Training</p>
+                            <p>
+                                <?php echo $full_date; ?> - 100% Support Due</p>
+                            <p>
+                                <?php echo $trip_date; ?> - Trip Dates</p>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-5">
+                            <h2 class="no-margin-top titles">Helpful Links</h2>
+                            <?php  if ($file1_url != ''){ ?>
+                            <div><a href="<?php echo $file1_url; ?>" target="_blank">Health Release/Code of Conduct</a></div>
+                            <?php } 
+                            if ($file2_url != ''){?>
+                            <div><a href="<?php echo $file2_url; ?>" target="_blank">Project Agreement</a></div>
+                            <?php } 
+                            if ($file3_url != ''){?>
+                            <div><a href="<?php echo $file3_url; ?>" target="_blank">Team Covenant</a></div>
+                            <?php } 
+                            if ($file4_url != ''){?>
+                            <div><a href="<?php echo $file4_url; ?>" target="_blank">Guide to Financial Contributions</a></div>
+                            <?php } 
+                            if ($file5_url != ''){?>
+                            <div><a href="<?php echo $file5_url; ?>" target="_blank">Packing List</a></div>
+                            <?php } 
+                            if ($file6_url != ''){?>
+                            <div><a href="<?php echo $file6_url; ?>" target="_blank">Vaccinations</a></div>
+                            <?php }?>
+                        </div>
                     </div>
                 </div>
             </div>

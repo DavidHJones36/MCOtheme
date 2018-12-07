@@ -105,7 +105,7 @@ if( rwmb_meta('bmco_title_image_size') == '400'){
         <div id="video-billboard">
                 <div class="container">
                     <div class="row">
-                        <div class="no-pad billboard-item col-md-12">
+                        <div class="no-pad billboard-item col-12">
                             <div class="container-video">
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <?php echo $event_video_url ?>
