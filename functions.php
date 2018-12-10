@@ -128,17 +128,17 @@ add_action( 'widgets_init', 'bootstrappermco_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bootstrappermco_scripts() {
-    wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), null, 'all' );
+    wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), 'v4.0.0', 'all' );
     
     wp_enqueue_style( 'wufoo-styles', get_template_directory_uri() . '/css/wufoo.css', array(), null, 'all' );
     
 	wp_enqueue_style( 'MCOtheme-style', get_stylesheet_uri() );
     
-    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), null, 'all' );
+    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), 'v4.7.0', 'all' );
     
-    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), null, true );
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), 'v.4.0.0', true );
     
-    wp_enqueue_script( 'underscore-js', get_template_directory_uri() . '/js/underscore-min.js', array('jquery'), null, true );
+    wp_enqueue_script( 'underscore-js', get_template_directory_uri() . '/js/underscore-min.js', array('jquery'), 'v.1.9.1', true );
     
     
     wp_enqueue_script( 'bootstrappermco-js', get_template_directory_uri() . '/js/bootstrappermco.js', array('jquery'), null, true );

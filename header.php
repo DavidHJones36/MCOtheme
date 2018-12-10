@@ -53,7 +53,7 @@ global $bmco_options;
         </style>
         <?php if ($fixed == 'fixed-top' && $transparent !='opaque'){ ?>
             <script>jQuery(document).ready(function ($) {
-                    $(window).scroll(function () {
+                    $(window).scroll(_.throttle(function () {
                             var scroll = $(window).scrollTop();
                             var logo = '<?php echo $logo; ?>';
                             <?php if ($transparent != 'opaque'){ ?>
@@ -71,7 +71,7 @@ global $bmco_options;
                                 $('.fixed-top').removeClass('opaque');
                                 $("#navLogo").attr('src', transparent);
                             }
-                        })
+                        },50))
                     });
             </script>
         <?php } ?>
