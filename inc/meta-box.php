@@ -37,9 +37,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('About','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-about.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-about.php'),
         'fields' => array(
         array(
             'name' => esc_html__('About Image Banner','bmco_'),
@@ -205,9 +203,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Contact','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-contact.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-contact.php'),
         'fields' => array(
         array(
             //Type
@@ -270,9 +266,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Newsletter','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-newsletter.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-newsletter.php'),
         'fields' => array(
         array(
             //Type
@@ -307,9 +301,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('SMI','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-smi.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-smi.php'),
         'fields' => array(
         array(
             'name' => esc_html__('Top Banner Image','bmco_'),
@@ -481,10 +473,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Event','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-event.php',
-                                    'template-complex-event.php',),
-        ),
+        'visible'  => array('template',  '=', array('template-event.php','template-complex-event.php')),
         'fields' => array(
         array(
             'name' => esc_html__('Event Image Banner','bmco_'),
@@ -602,9 +591,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Complex Event','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-complex-event.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-complex-event.php'),
         'fields' => array(
         array(
 				// Field name - Will be used as label
@@ -908,9 +895,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Donate','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-donate.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-donate.php'),
         'fields' => array(
         array(
             'name' => esc_html__('Donate Image Banner','bmco_'),
@@ -935,9 +920,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Redirect','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-redirect.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-redirect.php'),
         'fields' => array(
         array(
 				// Field name - Will be used as label
@@ -956,9 +939,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Volunteer','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-volunteer.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-volunteer.php'),
         'fields' => array(
         array(
 				// Field name - Will be used as label
@@ -975,9 +956,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Home Page','bmco_'),
         'post_types' => array('post','page'),
-        'show'  =>  array(
-            'template'  =>  array('template-home.php'),
-        ),
+        'visible'  => array('template',  '=', 'template-home.php'),
         'fields' => array(
             array(
 				'name'    => esc_html__( 'Feature or Home Banner', 'bmco_' ),
