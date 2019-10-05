@@ -473,7 +473,8 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Event','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('page_template',  array('template-event.php','template-complex-event.php')),
+        //'visible'  => array('page_template',  array('template-event.php','template-complex-event.php')),
+        'show'  =>  array('template' => array('template-event.php','template-complex-event.php')),
         'fields' => array(
         array(
             'name' => esc_html__('Event Image Banner','bmco_'),
@@ -591,7 +592,8 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Complex Event','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('page_template',   'template-complex-event.php'),
+        //'visible'  => array('page_template',   'template-complex-event.php'),
+        'show'  =>  array('template' => 'template-complex-event.php'),
         'fields' => array(
         array(
 				// Field name - Will be used as label
