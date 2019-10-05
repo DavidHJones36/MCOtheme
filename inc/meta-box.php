@@ -37,7 +37,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('About','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-about.php'),
+        'visible'  => array('page_template',  '=', 'template-about.php'),
         'fields' => array(
         array(
             'name' => esc_html__('About Image Banner','bmco_'),
@@ -203,7 +203,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Contact','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-contact.php'),
+        'visible'  => array('page_template',  '=', 'template-contact.php'),
         'fields' => array(
         array(
             //Type
@@ -266,7 +266,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Newsletter','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-newsletter.php'),
+        'visible'  => array('page_template',  '=', 'template-newsletter.php'),
         'fields' => array(
         array(
             //Type
@@ -301,7 +301,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('SMI','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-smi.php'),
+        'visible'  => array('page_template',  '=', 'template-smi.php'),
         'fields' => array(
         array(
             'name' => esc_html__('Top Banner Image','bmco_'),
@@ -473,7 +473,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Event','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', array('template-event.php','template-complex-event.php')),
+        'visible'  => array('page_template',  '=', array('template-event.php','template-complex-event.php')),
         'fields' => array(
         array(
             'name' => esc_html__('Event Image Banner','bmco_'),
@@ -591,7 +591,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Complex Event','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-complex-event.php'),
+        'visible'  => array('page_template',  '=', 'template-complex-event.php'),
         'fields' => array(
         array(
 				// Field name - Will be used as label
@@ -895,7 +895,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Donate','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-donate.php'),
+        'visible'  => array('page_template',  '=', 'template-donate.php'),
         'fields' => array(
         array(
             'name' => esc_html__('Donate Image Banner','bmco_'),
@@ -920,7 +920,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Redirect','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-redirect.php'),
+        'visible'  => array('page_template',  '=', 'template-redirect.php'),
         'fields' => array(
         array(
 				// Field name - Will be used as label
@@ -939,7 +939,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Volunteer','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-volunteer.php'),
+        'visible'  => array('page_template',  '=', 'template-volunteer.php'),
         'fields' => array(
         array(
 				// Field name - Will be used as label
@@ -956,7 +956,7 @@ function bmco_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title' => esc_html__('Home Page','bmco_'),
         'post_types' => array('post','page'),
-        'visible'  => array('template',  '=', 'template-home.php'),
+        'visible'  => array('page_template',  '=', 'template-home.php'),
         'fields' => array(
             array(
 				'name'    => esc_html__( 'Feature or Home Banner', 'bmco_' ),
